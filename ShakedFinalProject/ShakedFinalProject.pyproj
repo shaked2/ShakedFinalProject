@@ -54,6 +54,7 @@
     <Content Include="ShakedFinalProject\static\content\bootstrap.min.css" />
     <Content Include="ShakedFinalProject\static\content\site.css" />
     <Content Include="ShakedFinalProject\static\Data\AnimalCross.csv" />
+    <Content Include="ShakedFinalProject\static\Data\users.csv" />
     <Content Include="ShakedFinalProject\static\fonts\glyphicons-halflings-regular.eot" />
     <Content Include="ShakedFinalProject\static\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="ShakedFinalProject\static\fonts\glyphicons-halflings-regular.ttf" />
@@ -82,7 +83,9 @@
     <Content Include="ShakedFinalProject\templates\DataSet1.html" />
     <Content Include="ShakedFinalProject\templates\index.html" />
     <Content Include="ShakedFinalProject\templates\layout.html" />
+    <Content Include="ShakedFinalProject\templates\Login.html" />
     <Content Include="ShakedFinalProject\templates\Query.html" />
+    <Content Include="ShakedFinalProject\templates\Register.html" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.Web.targets" />
   <!-- Specify pre- and post-build commands in the BeforeBuild and 

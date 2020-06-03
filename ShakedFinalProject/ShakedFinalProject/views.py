@@ -148,6 +148,51 @@ def Query():
     )
 
 
+@app.route('/Register', methods=['GET', 'POST'])
+def Register():
+    form = UserRegistrationFormStructure(request.form)
+
+    if (request.method == 'POST' and form.validate()):
+        if (not db_Functions.IsUserExist(form.username.data)):
+            db_Functions.AddNewUser(form)
+            db_table = ""
+
+            flash('Thanks for registering new user - '+ form.FirstName.data + " " + form.LastName.data )
+            # Here you should put what to do (or were to go) if registration was good
+        else:
+            flash('Error: User with this Username already exist ! - '+ form.username.data)
+            form = UserRegistrationFormStructure(request.form)
+
+    return render_template(
+        'register.html', 
+        form=form, 
+        title='Register New User',
+        year=datetime.now().year,
+        repository_name='Pandas',
+        )
+
+
+@app.route('/Login', methods=['GET', 'POST'])
+def Login():
+    form = LoginFormStructure(request.form)
+
+    if (request.method == 'POST' and form.validate()):
+        if (db_Functions.IsLoginGood(form.username.data, form.password.data)):
+            flash('Login approved!')
+            return redirect('Query')
+           
+        else:
+            flash('Error in - Username and/or password')
+   
+    return render_template(
+        'login.html',
+        form=form, 
+        title='Login to data analysis',
+        year=datetime.now().year,
+        repository_name='Pandas',
+        )
+
+
 
 
 
