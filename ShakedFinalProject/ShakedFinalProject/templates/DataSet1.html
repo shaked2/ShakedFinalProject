@@ -1,0 +1,26 @@
+﻿﻿{% extends "layout.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block content %}
+
+
+<h2>{{ message }}</h2>
+
+<body style="background-color:#F6ECE4;">
+</body>
+
+<p>
+    <a class="btn btn-success" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample" style="background-color:#7FDEE5;outline-style:auto;color:#3663AD;" target="_blank">
+        Expand
+    </a>
+    <button class="btn btn-danger" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" style="background-color:#8EE7B0;outline-style:auto;color:#3663AD;" target="_blank">
+        Collapse
+    </button>
+</p>
+<div class="collapse" id="collapseExample">
+    <div class="card card-body">
+        {{ raw_data_table | safe}}
+    </div>
+</div>
+
+{% endblock %}
