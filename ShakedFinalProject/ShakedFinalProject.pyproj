@@ -43,6 +43,8 @@
     <Folder Include="ShakedFinalProject\static\content\" />
     <Folder Include="ShakedFinalProject\static\fonts\" />
     <Folder Include="ShakedFinalProject\static\Data\" />
+    <Folder Include="ShakedFinalProject\static\pics\" />
+    <Folder Include="ShakedFinalProject\static\static\" />
     <Folder Include="ShakedFinalProject\static\scripts\" />
     <Folder Include="ShakedFinalProject\templates\" />
   </ItemGroup>
@@ -56,6 +58,9 @@
     <Content Include="ShakedFinalProject\static\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="ShakedFinalProject\static\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="ShakedFinalProject\static\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="ShakedFinalProject\static\pics\05ee76e8-4eb3-4cae-89ca-c45d34cafcac.jpg" />
+    <Content Include="ShakedFinalProject\static\pics\6e311801-fe2a-4704-8d39-eba1b7400747.jpg" />
+    <Content Include="ShakedFinalProject\static\pics\sherb.png" />
     <Content Include="ShakedFinalProject\static\scripts\bootstrap.js" />
     <Content Include="ShakedFinalProject\static\scripts\bootstrap.min.js" />
     <Content Include="ShakedFinalProject\static\scripts\jquery-1.10.2.intellisense.js" />

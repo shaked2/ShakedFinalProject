@@ -122,17 +122,17 @@ def Query():
     chart = ''
     if (request.method == 'POST' ):
         df = pd.read_csv(path.join(path.dirname(__file__), 'static\\Data\\AnimalCross.csv')) #reads data
-        df = df.set_index('Species') #sets the index to "type"
-        Species = form.SpeciesTypes.data
+        #df = df.set_index('Species') #sets the index to "type"
+        #Species = form.SpeciesTypes.data
+        df = df.drop(['Flooring','Wallpaper','Color 2','Color 1','Style 2','Style 1','Favorite Song','Catchphrase','Birthday','Hobby','Gender','Personality','Name'], axis=1)
+        df.groupby(by='Species')
+        df = df['Species'].value_counts()
         df = df.loc[form.SpeciesTypes.data] #makes it that it only gets what the user selected
-        df = df.transpose()#changes rows to colums and vice versa, we use this to organize things so it's easier to use.
-        df = df.reset_index()
-        df = df.drop(['index'],1) #drops what we don't need
 
         #the following 4 lines render the actual graph
         fig = plt.figure()
         ax = fig.add_subplot(111)
-        df.plot(ax = ax , kind = 'bar')
+        df.plot(ax = ax , kind = 'bar', title=True)
         chart = plot_to_img(fig)
 
     
@@ -143,7 +143,7 @@ def Query():
         chart = chart ,
         SpeciesTypes = SpeciesTypes ,
         form = form ,
-        height = "300" ,
+        height = "400" ,
         width = "750"
     )
 
