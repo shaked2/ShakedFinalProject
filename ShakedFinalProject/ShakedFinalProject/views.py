@@ -132,7 +132,7 @@ def Query():
         #the following 4 lines render the actual graph
         fig = plt.figure()
         ax = fig.add_subplot(111)
-        df.plot(ax = ax , kind = 'bar', title=True)
+        df.plot(ax = ax , kind = 'bar', title="Species and their count")
         chart = plot_to_img(fig)
 
     
@@ -178,7 +178,6 @@ def Login():
 
     if (request.method == 'POST' and form.validate()):
         if (db_Functions.IsLoginGood(form.username.data, form.password.data)):
-            flash('Login approved!')
             return redirect('Query')
            
         else:
