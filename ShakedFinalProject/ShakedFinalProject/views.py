@@ -70,7 +70,7 @@ def contact():
         'contact.html',
         title='Contact',
         year=datetime.now().year,
-        message='Your contact page.'
+        
     )
 
 @app.route('/about')
@@ -80,7 +80,7 @@ def about():
         'about.html',
         title='About',
         year=datetime.now().year,
-        message='Your application description page.'
+        
     )
 
 @app.route('/Album')
@@ -90,7 +90,7 @@ def Album():
         'Album.html',
         title='Photos about ...',
         year=datetime.now().year,
-        message='Your application description page.'
+        
     )
 
 
