@@ -88,7 +88,7 @@ def Album():
     """Renders the about page."""
     return render_template(
         'Album.html',
-        title='Photos about ...',
+        title='Animal Crossing Album',
         year=datetime.now().year,
         
     )
