@@ -110,7 +110,7 @@ def DataSet1():
         form1 = form1,
         form2 = form2,
         title='This is Data Set 1 page',
-        message='In this page we will display the dataset we are using about Pokémon.'
+        message='In this page we will display the dataset we are using about Animal Crossing.'
     )
 
 @app.route('/Query', methods=['GET', 'POST'])
