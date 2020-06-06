@@ -68,7 +68,7 @@ def contact():
     """Renders the contact page."""
     return render_template(
         'contact.html',
-        title='Contact',
+        title='How to contact me',
         year=datetime.now().year,
         
     )
@@ -78,7 +78,7 @@ def about():
     """Renders the about page."""
     return render_template(
         'about.html',
-        title='About',
+        title='About me :)',
         year=datetime.now().year,
         
     )
